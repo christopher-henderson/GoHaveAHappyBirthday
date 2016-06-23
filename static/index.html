@@ -87,7 +87,7 @@
 
             <div class="seq-code">
 
-              <div class="seq-code-block" data-seq>
+<!--               <div class="seq-code-block" data-seq>
                 <i class="seq-step-icon">2</i>
                 <code>
                   <span>.seq-out .content {</span>
@@ -114,7 +114,7 @@
                   <span class="seq-code-1">transition: .25s;</span>
                   <span>}</span>
                 </code>
-              </div>
+              </div> -->
             </div>
 
           </div>
@@ -155,29 +155,18 @@
             <div class="seq-code">
 
               <div class="seq-code-block" data-seq>
+                <i class="seq-step-icon">1</i>
                 <code>
-                  <span>.seq-in .rotate {</span>
-                  <span class="seq-code-1">animation-name: rotate;</span>
-                  <span class="seq-code-1">animation-duration: 1s;</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.seq-in .fade {</span>
-                  <span class="seq-code-1">animation-name: fade;</span>
-                  <span class="seq-code-1">animation-duration: 1s;</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.seq-in .threed {</span>
-                  <span class="seq-code-1">animation-name: threed;</span>
-                  <span class="seq-code-1">animation-duration: 1s;</span>
-                  <span>}</span>
+                  <span style="word-wrap: break-word"><strong>Request:<br></strong>curl https://happybirthday.chenderson.org/poem</span>
+                  <br>
+                  <span style="word-wrap: break-word"><strong>Response:<br></strong>
+                  {<br>
+                     "status": "OK",<br>
+                     "letter": "R",<br>
+                     "what_you_are": "REDACTED.",<br>
+                     "has_more": "Yuppers!"<br>
+                  }
+                  </span>
                 </code>
               </div>
             </div>
@@ -200,7 +189,7 @@
 
               <h3 style="text-align: center">Get Acrostic Poems.</h3>
               <div class="seq-step">
-                <p style="text-align: center">Progressing through the poem is as easy as <code>/next</code></p>
+                <p style="text-align: center">Progressing through the poem is as easy as <code>/poem</code></p>
                 <p style="text-align: center" class="seq-tip seq-bulb">If you find your self in the middle of a poem, you can <code>/restart</code> it at any time!</p>
               </div>
 
@@ -256,28 +245,9 @@
 
               <div class="seq-code-block" data-seq>
                 <code>
-                  <span>.seq-in .touch {</span>
-                  <span class="seq-code-1">animation-name: rotate;</span>
-                  <span class="seq-code-1">animation: .35s 1.8s;</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.seq-in .touch-title-1 {</span>
-                  <span class="seq-code-1">animation-name: fade-out;</span>
-                  <span class="seq-code-1">animation: .3s 1.5s;</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.seq-in .touch-title-2 p {</span>
-                  <span class="seq-code-1">animation-name: slide-in;</span>
-                  <span class="seq-code-1">animation: .3s 2.35s;</span>
-                  <span>}</span>
+                  This is where a mobile code example would be but our latest
+                  round of funding fell through, so we're only promising this
+                  feature at the moment. MAYBE we'll deliver it.
                 </code>
               </div>
 
@@ -311,115 +281,15 @@
             <div class="seq-code">
 
               <div class="seq-code-block" data-seq>
-                <i class="seq-step-icon">5</i>
                 <code>
-                  <span>.seq-in .content {</span>
-                  <span class="seq-code-1">transform: <strong>translateZ(0)</strong>;</span>
-                  <span class="seq-code-1"><strong>will-change: transform</strong>;</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <i class="seq-step-icon">6</i>
-                <code>
-                  <span><strong>.seq-next</strong> {</span>
-                  <span class="seq-code-1">/* Makes an element a functioning next button */</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <i class="seq-step-icon">7</i>
-                <code>
-                  <span><strong>.seq-touch</strong> {</span>
-                  <span class="seq-code-1">/* Styles for touch devices */</span>
-                  <span>}</span>
+                  Stack Overflow said that the best way to speed up my desktop
+                  is to uninstall IE. Seems legit.
                 </code>
               </div>
 
             </div>
 
           </div>
-<!--           <div class="seq-content seq-valign" data-seq>
-
-            <div class="seq-instruction">
-
-              <h3>All of the features you need for animated applications</h3>
-
-              <div class="seq-step">
-                <p><a href="http://sequencejs.com/documentation/" title="Read the Sequence.js documentation">Fully documented</a>, along with <a href="http://sequencejs.com/documentation/#options" title="Learn more about Sequence.js options">30+ options</a>, and an <a href="http://sequencejs.com/documentation/#api" title="Learn more about the Sequence.js API">easy-to-use API</a>.</p>
-
-                <ul class="seq-features">
-                  <li>
-                    <i class="fa fa-check"></i> Responsive Support
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Hardware Accelerated Animation<sup class="seq-step-icon">5</sup>
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Touch Support
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Easy-to-add UI<sup class="seq-step-icon">6</sup>
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Auto Play/Cycle
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> State Classes for Easy Styling<sup class="seq-step-icon">7</sup>
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> Preloader
-                  </li>
-                  <li>
-                    <i class="fa fa-check"></i> &amp; More
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </li>
-
-        <li class="seq-step6" id="step6">
-          <div class="seq-code-pane seq-valign">
-
-            <button type="button" class="seq-view-code">
-              <i class="fa fa-angle-double-up"></i> Show Code
-            </button>
-
-            <div class="seq-code">
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.browser-icon {</span>
-                  <span class="seq-code-1">transform: scale(0);</span>
-                  <span class="seq-code-1">transition: .2s;</span>
-                  <span class="seq-code-1">transition-timing-function: cubic-bezier(.55,1.58,.63,.99);</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>.seq-in .browser-icon {</span>
-                  <span class="seq-code-1">transform: scale(1);</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <i class="seq-step-icon">8</i>
-                <code>
-                  <span>.seq-fallback {</span>
-                  <span class="seq-code-1">/* Fallback specific styles */</span>
-                  <span>}</span>
-                </code>
-              </div>
-
-            </div>
-
-          </div> -->
           <div class="seq-content seq-valign" data-seq>
 
             <div class="seq-instruction">
@@ -480,15 +350,7 @@
 
               <div class="seq-code-block" data-seq>
                 <code>
-                  <span>/* Install via NPM */</span>
-                  <span><strong>npm install sequencejs</strong></span>
-                </code>
-              </div>
-
-              <div class="seq-code-block" data-seq>
-                <code>
-                  <span>/* Install via Bower */</span>
-                  <span><strong>bower install sequencejs</strong></span>
+                  <span><strong>Slightly better than left-pad!</strong></span>
                 </code>
               </div>
 
@@ -500,14 +362,9 @@
 
             <div class="seq-instruction">
 
-<!--               <p class="seq-follow-on">This presentation was powered by...</p>
-              <object class="seq-logo" type="image/svg+xml" data="images/sequence-logo.svg" width="240" height="48">
-      					<img src="images/sequence-logo.png" alt="Sequence.js logo" width="240" height="46" />
-      				</object> -->
-
               <p>Give a it a cURL today!</p>
               <p><code>curl https://happybirthday.chenderson.org/poem</code></p>
-              <a href="http://sequencejs.com/download/" title="Download Sequence.js" class="seq-button seq-button-link">github<i class="fa fa-arrow-circle-down"></i></a>
+              <a href="https://github.com/christopher-henderson/GoHaveAHappyBirthday" title="Download Sequence.js" class="seq-button seq-button-link">github<i class="fa fa-arrow-circle-down"></i></a>
             </div>
 
           </div>
@@ -523,12 +380,6 @@
 
   <ul role="navigation" aria-label="Pagination" aria-controls="sequence" class="seq-pagination">
     <li class="seq-current"><a href="#step1" rel="step1" title="Go to slide 1: Intro"><i class="fa fa-bookmark"></i> <span>Intro</span></a></li>
-    <li><a href="#step2" rel="step2" title="Go to slide 2: How It Works"><i class="fa fa-info-circle"></i> <span>How It Works</span></a></li>
-    <li><a href="#step3" rel="step3" title="Go to slide 3: Animation"><i class="fa fa-bolt"></i> <span>Animation</span></a></li>
-    <li><a href="#step4" rel="step4" title="Go to slide 4: Responsive/Touch"><i class="fa fa-expand"></i> <span>Responsive/Touch</span></a></li>
-    <li><a href="#step5" rel="step5" title="Go to slide 5: Features"><i class="fa fa-cog"></i> <span>Features</span></a></li>
-    <li><a href="#step6" rel="step6" title="Go to slide 6: Support"><i class="fa fa-tablet"></i> <span>Support</span></a></li>
-    <li><a href="#step7" rel="step7" title="Go to slide 7: Download"><i class="fa fa-arrow-circle-down"></i> <span>Download</span></a></li>
   </ul>
 
   <script src="scripts/imagesloaded.pkgd.min.js"></script>

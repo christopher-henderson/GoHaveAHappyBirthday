@@ -22,19 +22,19 @@ type Acrostic struct {
 
 var ACROSTICS []*Acrostic = []*Acrostic{
 	&Acrostic{"J", "Just. As in 'Justice'. NOT as in, like, 'eh'.", "tRuE"},
-	&Acrostic{"i", "Intergalactic hyper star.", "Probably"},
-	&Acrostic{"l", "Last time I heard, really damned nice.", "Of fucking course."},
+	&Acrostic{"i", "Intent on what you want.", "Oh, Lord, if I can spell right then yeah. Probably."},
+	&Acrostic{"l", "Lady Reagent of the Princessipality of Math.", "There' always more for the Math Princess."},
 	&Acrostic{"l", "...really good at parsing Logs? Damned second L...", "Sorry for that one, there's more."},
-	&Acrostic{"i", "Intergalactic hyper star.", "Of fucking course."},
-	&Acrostic{"a", "Always there.", "Of fucking course."},
-	&Acrostic{"n", "Last time I heard, really damned nice.", "Of fucking course."},
-	
+	&Acrostic{"i", "Intergalactic hyper star.", "No points for guessing the next letter."},
+	&Acrostic{"a", "Always there.", "There is also always more."},
+	&Acrostic{"n", "Much Nice.", "Is he going to try for the last name, too!?"},
+
 	&Acrostic{"K", "By far the Kindest and most considerate person I know.", "Of fucking course."},
-	&Acrostic{"a", "So amazingly Accomplished.", "Of fucking course."},
-	&Acrostic{"r", "Last time I heard, really damned nice.", "Of fucking course."},
-	&Acrostic{"n", "Last time I heard, really damned nice.", "Of fucking course."},
-	&Acrostic{"e", "Last time I heard, really damned nice.", "Of fucking course."},
-	&Acrostic{"r", "Last time I heard, really damned nice.", "Of fucking course."},
+	&Acrostic{"a", "So amazingly Accomplished.", "Ooof this is getting hard. I'm not good at these."},
+	&Acrostic{"r", "400lbs by 25. Yeah, I gave up on this one. Too many letteRs.", "Aaaaalmost there!"},
+	&Acrostic{"n", "N is relatively close to S so I'm just going to point out how smart you are.", "He's really running out of gas, now..."},
+	&Acrostic{"e", "So Exuberant and full of life (when Phoenix isn't acively trying to suck it out of you).", "THIS IS HARDER THAN I THOUGHT IT WAS GOING TO BE."},
+	&Acrostic{"r", "Have a Really awesome birthday, Jillian. You deserve it.", "Well, no. Not really. But it does loop around anyways."},
 }
 
 func getResponse(resetting bool) BirthdayResponse {
@@ -68,6 +68,13 @@ var getNext func(resetting bool) *Acrostic = func() func(bool) *Acrostic {
 	}
 }()
 
+func goodMorning(w http.ResponseWriter, r *http.Request) {
+	returnJson(w, r, struct {
+		Status  string `json:"status"`
+		Message string `json:"message"`
+	}{http.StatusText(http.StatusOK), "Happy birthday, Jillain!"})
+}
+
 func next(w http.ResponseWriter, r *http.Request) {
 	returnJson(w, r, getResponse(false))
 }
@@ -87,7 +94,8 @@ func returnJson(w http.ResponseWriter, r *http.Request, obj interface{}) {
 }
 
 func main() {
-	http.HandleFunc("/next", next)
+	http.HandleFunc("/goodmorning", goodMorning)
+	http.HandleFunc("/poem", next)
 	http.HandleFunc("/restart", restart)
 	fmt.Println(http.ListenAndServe(":8080", nil))
 }
