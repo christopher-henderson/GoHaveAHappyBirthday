@@ -72,7 +72,7 @@ func goodMorning(w http.ResponseWriter, r *http.Request) {
 	returnJson(w, r, struct {
 		Status  string `json:"status"`
 		Message string `json:"message"`
-	}{http.StatusText(http.StatusOK), "Happy birthday, Jillain!"})
+	}{http.StatusText(http.StatusOK), "Happy birthday, Jillian!"})
 }
 
 func next(w http.ResponseWriter, r *http.Request) {
