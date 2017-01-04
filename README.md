@@ -1,3 +1,3 @@
 # GoHaveAHappyBirthday
 
-Replace the poems with words loving for someone.
+Replace the poems with loving words for someone.
